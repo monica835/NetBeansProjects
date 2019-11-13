@@ -4,21 +4,18 @@
  * and open the template in the editor.
  */
 
-package filtering;
-
-import StringManipulation.FilterHTML;
-import StringManipulation.Start;
+package examples;
 
 /**
  *
  * @author dinglasamo_sd2082
  */
-public class NewFrame extends javax.swing.JFrame {
+public class StopWatch extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewFrame
+     * Creates new form StopWatch
      */
-    public NewFrame() {
+    public StopWatch() {
         initComponents();
     }
 
@@ -31,18 +28,18 @@ public class NewFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextAreafiltered1 = new javax.swing.JTextArea();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jButtonstart = new javax.swing.JButton();
         jButtonstop = new javax.swing.JButton();
-
-        jTextAreafiltered1.setColumns(20);
-        jTextAreafiltered1.setRows(5);
-        jScrollPane3.setViewportView(jTextAreafiltered1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButtonstart.setText("Start");
+        jButtonstart.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonstartMouseClicked(evt);
+            }
+        });
         jButtonstart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonstartActionPerformed(evt);
@@ -56,20 +53,20 @@ public class NewFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jButtonstart, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(jButtonstop, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGap(95, 95, 95)
+                .addComponent(jButtonstart)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(jButtonstop)
+                .addGap(91, 91, 91))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(171, 171, 171)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(179, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonstart)
-                    .addComponent(jButtonstop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(108, Short.MAX_VALUE))
+                    .addComponent(jButtonstop))
+                .addGap(98, 98, 98))
         );
 
         pack();
@@ -77,10 +74,12 @@ public class NewFrame extends javax.swing.JFrame {
 
     private void jButtonstartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonstartActionPerformed
         // TODO add your handling code here:
-        Start s=new Start();
-        s.count();
-        
     }//GEN-LAST:event_jButtonstartActionPerformed
+
+    private void jButtonstartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonstartMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonstartMouseClicked
 
     /**
      * @param args the command line arguments
@@ -99,28 +98,27 @@ public class NewFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StopWatch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StopWatch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StopWatch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StopWatch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewFrame().setVisible(true);
+                new StopWatch().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButtonstart;
     private javax.swing.JButton jButtonstop;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextAreafiltered1;
     // End of variables declaration//GEN-END:variables
 }
