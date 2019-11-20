@@ -29,12 +29,19 @@ public class Floewer {
                 for (int j = 0; j < width; j++) {
 
                     Color c = new Color(image.getRGB(j, i));
-                    int red = (int) (c.getRed() * 0.299);
-                    int green = (int) (c.getGreen() * 0.587);
-                    int blue = (int) (c.getBlue() * 0.114);
-                    //Color newColor = new Color(red+green+blue, red+green+blue, + red+green+blue);
-                    Color newColor = new Color(0, 0, 0);
-                    image.setRGB(j, i, newColor.getRGB());
+
+                    Color black = new Color(0, 0, 0);
+                    Color mon =new Color(255,255,255);
+                    int white = 50;
+                    
+                    if(c.getRGB()== black.getRGB() || (c.getBlue()<white && c.getGreen()<white && c.getRed()<white)){
+                        
+                    }
+                    else{
+                        image.setRGB(j, i,mon.getRGB());
+                    }
+                    
+                 
                 }
             }
 

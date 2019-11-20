@@ -22,7 +22,7 @@ public class DBConnection {
     {  
     Class.forName("com.mysql.jdbc.Driver");  
     Connection con=DriverManager.getConnection(  
-    "jdbc:mysql://localhost:3306/monica","root","");  
+    "jdbc:mysql://172.16.3.17/monica","christian","guapo");  
     //here sonoo is database name, root is username and password  
     Statement stmt=con.createStatement();  
     String sqlString ="insert into users(name,age,role) values ('monica','20','student')";
