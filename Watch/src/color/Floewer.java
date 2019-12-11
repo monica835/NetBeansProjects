@@ -1,4 +1,3 @@
-
 package color;
 
 /**
@@ -31,21 +30,19 @@ public class Floewer {
                     Color c = new Color(image.getRGB(j, i));
 
                     Color black = new Color(0, 0, 0);
-                    Color mon =new Color(255,255,255);
+                    Color mon = new Color(255, 255, 255);
                     int white = 50;
-                    
-                    if(c.getRGB()== black.getRGB() || (c.getBlue()<white && c.getGreen()<white && c.getRed()<white)){
-                        
+
+                    if (c.getRGB() == black.getRGB() || (c.getBlue() < white && c.getGreen() < white && c.getRed() < white)) {
+
+                    } else {
+                        image.setRGB(j, i, mon.getRGB());
                     }
-                    else{
-                        image.setRGB(j, i,mon.getRGB());
-                    }
-                    
-                 
+
                 }
             }
 
-            File ouptut = new File("C:\\Users\\dinglasamo_sd2082\\Monica/flower1.jpg");
+            File ouptut = new File("C:\\Users\\dinglasamo_sd2082\\Monica/flower2.jpg");
             ImageIO.write(image, "jpg", ouptut);
 
         } catch (Exception e) {

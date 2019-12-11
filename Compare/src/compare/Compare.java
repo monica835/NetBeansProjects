@@ -25,7 +25,7 @@ public class Compare {
         // TODO code application logic here
         Instant start = Instant.now();
         System.out.println("Start time: " + start);
-        for (int i = 1; i <1001; i++) {
+        for (int i = 1; i <201; i++) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monica", "root", "");

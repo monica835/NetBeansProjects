@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class FilterHTML {
 
     public String removedHTML(String str) {
-        str = str.replaceAll("\\<.*?\\>", "");
+        str = str.replaceAll("the", "");
         return str;
     }
 
@@ -96,3 +96,4 @@ public class FilterHTML {
 
     }
 }
+

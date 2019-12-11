@@ -28,12 +28,12 @@ public class GETTIME {
         try {
             int id = 1;
             Instant start = Instant.now();
-            System.out.println("Star"
+            System.out.println("Start"
                     + " time: " + start);
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/monica", "root", "");
 //            
-            for (int i = 1; i <1001; i++) {
+            for (int i = 1; i <201; i++) {
 //                PreparedStatement rs = con.prepareStatement("DELETE  from tbl1000 WHERE id= " + id + "");
                 PreparedStatement rs = con.prepareStatement("insert into tbl1000 (col1, col2, col3, col4, col5)" + "values (?,?,?,?,?)");
                 rs.setInt(1, i);
